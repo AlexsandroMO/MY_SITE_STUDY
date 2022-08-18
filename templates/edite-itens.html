@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="XX">
+    <h1>Adicione um Novo Paciente</h1>
+    
+  <form action="/edite_data" method="POST">
+      <p>Dados Pessoais</p>
+    
+      <label for="read-id">
+        <span>Item</span>
+        <input type="number" name="read-id" value="{{read_id.0}}" >
+      </label>
+      <label for="name-paciente">
+        <span>Nome</span>
+        <input type="text" name="name-paciente" value="{{read_id.1}}">
+      </label>
+      <label for="age-paciente">
+        <span>Data de Nascimento</span>
+        <input type="date" id="date" name="age-paciente" value="{{read_id.2}}">
+      </label>
+      <label for="gen-paciente">
+        <span>Gênero</span>
+        <select name="gen-paciente">
+          <option>{{read_id.3}}</option>
+          <option>--</option>
+          <option>Masculino</option>
+          <option>Feminino</option>
+          <option>Trangênero</option>
+        </select>
+      </label>
+      <label for="cpf-paciente">
+        <span>CPF</span>
+        <input type="number" name="cpf-paciente" maxlength="11" value="{{read_id.4}}">
+      </label>
+
+      <p>Dados do Paciente</p>
+      
+      <label for="p-paciente">
+        <span>Peso</span>
+        <input type="number" name="p-paciente" value="{{read_id.5}}">
+      </label>
+      <label for="a-paciente">
+        <span>Altura</span>
+        <input type="number" name="a-paciente" onchange="setTwoNumberDecimal" min="0" max="10" step="0.01" value="{{read_id.5}}"  />
+      </label>
+        <input type="submit" class="btn-success" value="Adicionar-Paciente">
+    </form>
+</div>
+
+{% endblock content %}

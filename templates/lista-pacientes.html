@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block content %}
+
+  <div>
+    <h1>LISTA DE PACIENTES</h1>
+  </div>
+  <div>
+    <label for="a-paciente">
+      <span>Cadastro de Pacientes: </span>
+      <a href="/create_p"><button type="submit">Cadastrar Pacientes</button></a>
+    </label>
+  </div>
+
+  <div class="tabelas">
+    <table>
+      <thead>
+        <tr>
+          <th>ITEM</th>
+          <th>NOME</th>
+          <th>NASCIMENTO</th>
+          <th>GÊNERO</th>
+          <th>CPF</th>
+          <th>PESO</th>
+          <th>ALTURA</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for item in lista_pacientes %}
+        <tr> <!-- Linhas -->
+          <td class="link-td"><a href="/edite_pac/{{item.0}}">{{item.0}}</a></td> <!-- Colunas -->
+          <td>{{item.1}}</td> <!-- Colunas -->
+          <td>{{item.2}}</td>
+          <td>{{item.3}}</td>
+          <td>{{item.4}}</td>
+          <td>{{item.5}}</td>
+          <td>{{item.6}}</td>
+          <!-- <td class="link-td"><a href="/del_data/{{item.0}}">X</a></td> -->
+          <td class="link-td" onclick="verify();">{{item.0}}</td>
+        </tr>
+      <!-- {% endfor %} -->
+      </tbody>
+    </table>
+  </div>
+
+{% endblock content %}

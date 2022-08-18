@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}"> -->
+  <link rel="stylesheet" href="static/styles.css">
+
+  <title>MEU SITE</title>
+</head>
+<body>
+  <header>
+  <nav>
+    <div class="logo-m">
+      <a href="/"><img src="static/img/medicina-logo.png"></a>
+    </div>
+    <ul class="nav-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/lista_pac">Pacientes</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="/create_p">Register</a></li>
+    </ul>
+  </nav>
+</header>
+<main></main>
+
+  {% block content %}{% endblock %}
+  
+<footer>
+  <div>
+    Desenvolvido por AULAS
+  </div>
+</footer>
+</body>
+  
+<script src="static/scripts.js"></script>
+
+</html>
