@@ -5,6 +5,15 @@ $("#list a").click(function(event){
 });
  */
 
+
+window.onload = function () {
+    //var el = document.getElementById("title-div");
+    var el = document.querySelectorAll(".click")
+    el.style.cursor = "pointer";
+    el.onclick = verify;
+}
+
+
 function verify(){
     console.log('teste!')
 

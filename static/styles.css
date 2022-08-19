@@ -1,10 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-  }
-  
-  div{
-    padding: 20px;
+    font-family: Arial;
   }
   
   a{
@@ -30,23 +27,28 @@
     padding-bottom: 20px;
   }
   
-  p{
-    font-family: Arial;
+  .container{
+    padding-top: 1%;
+    padding-left: 1%;
   }
-  
+
   footer{
     font-family: Arial;
     padding-top: 20px;
     padding-bottom: 10px;
   }
   
+  .foot-ajust{
+    padding-left: 1%;
+  }
+
   nav{
     display: flex;
-    /*justify-content: space-around;*/
+    /* justify-content: space-around; */
     align-items: center;
     font-family: Helvetica, Arial, sans-serif;
     background: #464658;
-    height: 10vh;
+    height: 6vh;
   }
   
   .nav-list {
@@ -68,6 +70,7 @@
   
   table{
     width: 50%;
+    text-align: center;
   }
   
   footer{
@@ -77,5 +80,17 @@
   }
   
 .link-td{
-    background-color: #67676f;
+    background-color: #484849;
+    color: #fff;
+    padding: 3px;
+    display: block;
+    cursor: pointer;
   }
+
+.link-td:hover{
+  background-color: rgb(192, 199, 194);
+}
+
+.alinha-text{
+  padding-bottom: 1%;
+}

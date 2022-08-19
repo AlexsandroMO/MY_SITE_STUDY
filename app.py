@@ -34,9 +34,8 @@ def edite_pac(page_id):
   for read in range(0, len(read_db_id['ID'])):
     read_id = [page_id,read_db_id['NAME'].loc[read],read_db_id['AGE'].loc[read],read_db_id['GEN'].loc[read],read_db_id['CPF'].loc[read],read_db_id['P_PAC'].loc[read],read_db_id['A_PAC'].loc[read]]
 
-  #read_db_id = Calc_DB.ed_data(read_id[0], read_id[1],read_id[2], read_id[3], read_id[4], read_id[5], read_id[6])
-
   return render_template('edite-itens.html', read_id=read_id)
+
 
 @app.route('/create_p')
 def create_p():

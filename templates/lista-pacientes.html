@@ -4,7 +4,7 @@
   <div>
     <h1>LISTA DE PACIENTES</h1>
   </div>
-  <div>
+  <div class="alinha-text">
     <label for="a-paciente">
       <span>Cadastro de Pacientes: </span>
       <a href="/create_p"><button type="submit">Cadastrar Pacientes</button></a>
@@ -35,7 +35,7 @@
           <td>{{item.5}}</td>
           <td>{{item.6}}</td>
           <!-- <td class="link-td"><a href="/del_data/{{item.0}}">X</a></td> -->
-          <td class="link-td" onclick="verify();">{{item.0}}</td>
+          <td class="link-td" onclick="verify();"><p class="clic">{{item.0}}</p></td>
         </tr>
       <!-- {% endfor %} -->
       </tbody>
